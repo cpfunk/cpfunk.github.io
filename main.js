@@ -9,20 +9,22 @@ function setSelectedBtn(btnID) {
     var underline = document.getElementById("ul");
     var btn = document.getElementById(btnID);
 
-    btn.className = "btn_select";
-
-    //make underline visable
-    underline.style.visibility = "visible";
-    //move underline under button
-    underline.style.left = (btn.getBoundingClientRect().x - 16) + 'px';
-    //udjust underline width    
-    underline.style.width = btn.offsetWidth + 'px';
-
-    if(btnID != btnIsSelected && btnIsSelected != null) {
-        document.getElementById(btnIsSelected).className = "btn_unselect";
+    if (btn != null) {
+        btn.className = "btn_select";
+    
+        //make underline visable
+        underline.style.visibility = "visible";
+        //move underline under button
+        underline.style.left = (btn.getBoundingClientRect().x - 16) + 'px';
+        //udjust underline width    
+        underline.style.width = btn.offsetWidth + 'px';
+    
+        if(btnID != btnIsSelected && btnIsSelected != null) {
+            document.getElementById(btnIsSelected).className = "btn_unselect";
+        }
+    
+        btnIsSelected = btnID;
     }
-
-    btnIsSelected = btnID;
 }
 
 function onHover(btn) {
