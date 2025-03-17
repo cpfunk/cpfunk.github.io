@@ -26,7 +26,7 @@ body {
 }
 
 #info {
-    margin-right: var(--horizontal-margin);
+    margin-left: var(--horizontal-margin);
     width: 50%;
 }
 
