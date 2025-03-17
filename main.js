@@ -1,10 +1,13 @@
-var btnIsSelected = null;
-
 function onClick(newContent, btnID) {
+    document.getElementById("content").src = newContent;
+
+    setSelectedBtn(btnID);
+}
+
+var btnIsSelected = null;
+function setSelectedBtn(btnID) {
     var underline = document.getElementById("ul");
     var btn = document.getElementById(btnID);
-
-    document.getElementById("content").src = newContent;
 
     btn.className = "btn_select";
 
@@ -38,24 +41,9 @@ var lastPath = null;
 function oniframeLoad(iframeID) {
     var relPath = document.getElementById(iframeID).contentDocument.location.href.split("/").pop();
     var btnID = relPath.split(".")[0];
-    var btn = document.getElementById(btnID);
-    var underline = document.getElementById("ul");
 
     if (relPath != lastPath && lastPath != null) {
-        btn.className = "btn_select";
-
-        //make underline visable
-        underline.style.visibility = "visible";
-        //move underline under button
-        underline.style.left = (btn.getBoundingClientRect().x - 16) + 'px';
-        //udjust underline width    
-        underline.style.width = btn.offsetWidth + 'px';
-    
-        if(btnID != btnIsSelected && btnIsSelected != null) {
-            document.getElementById(btnIsSelected).className = "btn_unselect";
-        }
-    
-        btnIsSelected = btnID;
+        setSelectedBtn(btnID);
     }
 
     lastPath = relPath;
