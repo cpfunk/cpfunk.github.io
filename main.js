@@ -39,6 +39,7 @@ function oniframeLoad(iframeID) {
     var relPath = document.getElementById(iframeID).contentDocument.location.href.split("/").pop();
     var btnID = relPath.split(".")[0];
     var btn = document.getElementById(btnID);
+    var underline = document.getElementById("ul");
 
     if (relPath != lastPath && lastPath != null) {
         btn.className = "btn_select";
