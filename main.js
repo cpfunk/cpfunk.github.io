@@ -33,3 +33,9 @@ function onOut(btn) {
         btn.className = "btn_unselect";
     }
 }
+
+function oniframeLoad(iframeID) {
+    var path = getElementById(iframeID).contentDocument.location.href;
+
+    alert(path);
+}
