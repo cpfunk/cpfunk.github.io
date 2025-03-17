@@ -34,8 +34,14 @@ function onOut(btn) {
     }
 }
 
+var lastPath = null;
 function oniframeLoad(iframeID) {
-    var path = document.getElementById(iframeID).contentDocument.location.href;
+    var relPath = document.getElementById(iframeID).contentDocument.location.href.split("/").pop();
+    const btnID = relPath.split(".")[0];
 
-    alert(path);
+    if (relPath != lastPath && lastPath != null) {
+        onClick(relPath, btnID);
+    }
+
+    lastPath = relPath;
 }
