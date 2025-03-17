@@ -35,7 +35,7 @@ function onOut(btn) {
 }
 
 function oniframeLoad(iframeID) {
-    var path = getElementById(iframeID).contentDocument.location.href;
+    var path = document.getElementById(iframeID).contentDocument.location.href;
 
     alert(path);
 }
