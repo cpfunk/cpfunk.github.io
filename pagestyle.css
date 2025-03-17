@@ -30,3 +30,8 @@ h1 {
     font-size: 12pt;
 }
 
+p {
+    color: var(--fore-color);
+    font-family: "Alegreya Sans", sans-serif;
+    margin-left: 16px;
+}
