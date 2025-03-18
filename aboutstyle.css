@@ -4,6 +4,7 @@
     --unselect-color: rgba(255, 255, 255, 0.8);
     --vertical-margin: 8px;
     --horizontal-margin: 16px;
+    --border-style: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -26,7 +27,13 @@ body {
 }
 
 #info {
-    margin-left: var(--horizontal-margin);
+    padding-left: var(--horizontal-margin);
+    padding-right: var(--horizontal-margin);
+    padding-top: var(--vertical-margin);
+    padding-bottom: var(--vertical-margin);
+    border-top: var(--border-style);
+    border-bottom: var(--border-style);
+    border-right: var(--border-style);
     width: 50%;
 }
 
