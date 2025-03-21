@@ -35,7 +35,7 @@ function onHover(btn) {
 
 function onOut(btn) {
     if(btn.id != btnIsSelected) {
-        btn.className = "btn_unselect";
+        btn.className = "btn";
     }
 }
 
