@@ -20,6 +20,7 @@ a {
     color: var(--fore-color);
     font-family: "Alegreya Sans", sans-serif;
     margin-left: 16px;
+    width: fit-content;
 }
 
 h1 {
