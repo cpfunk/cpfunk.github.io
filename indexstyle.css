@@ -36,17 +36,26 @@ body {
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
     font-weight: 700;
-    font-size: 18pt;
+    font-size: 20pt;
     color: var(--fore-color);
     margin: 0px;
+}
+
+button {
+    background-color: transparent;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 12pt;
+    padding: 0px;
+    margin-left: var(--horizontal-margin);
+    color: var(--unselect-color);
+    border-width: 0px;
 }
 
 .btn_select {
     background-color: transparent;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
-    font-size: 12pt;
-    padding: 0px;
     margin-left: var(--horizontal-margin);
     color: var(--fore-color);
     border-width: 0px;
@@ -56,21 +65,7 @@ body {
     background-color: transparent;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
-    font-size: 12pt;
-    padding: 0px;
-    margin-left: var(--horizontal-margin);
     color: var(--fore-color);
-    border-width: 0px;
-}
-
-.btn_unselect {
-    background-color: transparent;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-size: 12pt;
-    padding: 0px;
-    margin-left: var(--horizontal-margin);
-    color: var(--unselect-color);
     border-width: 0px;
 }
 
