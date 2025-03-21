@@ -8,6 +8,7 @@
 
 body {
     margin: 0px;
+    padding: 16px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -19,7 +20,6 @@ body {
 a {
     color: var(--fore-color);
     font-family: "Alegreya Sans", sans-serif;
-    margin-left: 16px;
     width: fit-content;
 }
 
