@@ -36,3 +36,8 @@ p {
     font-family: "Alegreya Sans", sans-serif;
     margin-left: 16px;
 }
+
+#a_download {
+    font-size: 14px;
+    text-decoration: none;
+}
