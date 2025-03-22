@@ -1,0 +1,126 @@
+:root {
+    --back-color: #0A0A0A;
+    --fore-color: white;
+    --unselect-color: rgba(255, 255, 255, 0.8);
+    --vertical-margin: 8px;
+    --horizontal-margin: 16px;
+    --border-style: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+    margin: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.regtxt {
+    color: var(--fore-color);
+}
+
+.background {
+    background-color: var(--back-color);
+    margin: 0px;
+}
+
+.banner {
+    margin-top: var(--vertical-margin);
+    margin-bottom: var(--vertical-margin);
+    margin-left: var(--horizontal-margin);
+}
+
+.title {
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20pt;
+    color: var(--fore-color);
+    margin: 0px;
+}
+
+button {
+    background-color: transparent;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 12pt;
+    padding: 0px;
+    margin-left: var(--horizontal-margin);
+    color: var(--unselect-color);
+    border-width: 0px;
+}
+
+.btn_select {
+    background-color: transparent;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    margin-left: var(--horizontal-margin);
+    color: var(--fore-color);
+    border-width: 0px;
+}
+
+.btn_hover {
+    background-color: transparent;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    color: var(--fore-color);
+    border-width: 0px;
+}
+
+.page_buttons {
+    margin-bottom: var(--vertical-margin);
+}
+
+.underline {
+    height: 2px;
+    transition: width 0.3s, left 0.3s;
+    position: relative;
+    visibility: hidden;
+    background-color: var(--fore-color);
+    margin-left: var(--horizontal-margin);
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.nav {
+    border-bottom: var(--border-style);
+}
+
+.content {
+    border: 0px;
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    padding-top: var(--vertical-margin);
+    padding-bottom: var(--vertical-margin);
+    padding-left: var(--horizontal-margin);
+    padding-right: var(--horizontal-margin);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a {
+    color: var(--unselect-color);
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--fore-color);
+}
+
+.copyright {
+    align-content: center;
+    width: 100%;
+    background-color: transparent;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
