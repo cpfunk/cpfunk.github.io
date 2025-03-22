@@ -1,0 +1,38 @@
+:root {
+    --back-color: #0A0A0A;
+    --fore-color: white;
+    --unselect-color: rgba(255, 255, 255, 0.8);
+    --vertical-margin: 8px;
+    --horizontal-margin: 16px;
+}
+
+body {
+    margin: 0px;
+    padding: 16px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+a {
+    color: var(--fore-color);
+    font-family: "Alegreya Sans", sans-serif;
+    width: fit-content;
+}
+
+h1 {
+    color: var(--fore-color);
+    font-family: "IBM Plex Mono", monospace;
+    margin-left: 16px;
+    font-weight: 600;
+    font-size: 12pt;
+}
+
+p {
+    color: var(--fore-color);
+    font-family: "Alegreya Sans", sans-serif;
+    margin-left: 16px;
+}
