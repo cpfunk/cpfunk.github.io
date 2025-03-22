@@ -25,7 +25,6 @@ a {
 h1 {
     color: var(--fore-color);
     font-family: "IBM Plex Mono", monospace;
-    margin-left: 16px;
     font-weight: 600;
     font-size: 12pt;
 }
@@ -33,7 +32,6 @@ h1 {
 p {
     color: var(--fore-color);
     font-family: "Alegreya Sans", sans-serif;
-    margin-left: 16px;
 }
 
 #a_download {
