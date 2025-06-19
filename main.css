@@ -8,7 +8,7 @@
     --heading-color: black;
     --link: var(--highlight);
     --link-visited: purple;
-    --border-style: 1px solid grey;
+    --border-style: 1px solid black;
     --body-font-size: 18px;
 }
 
