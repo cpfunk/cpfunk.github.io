@@ -111,11 +111,11 @@ tr:nth-child(even) {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 700px;
+    width: 800px;
     height: fit-content;
     background-color: var(--box-fill);
     margin: 0px auto;
-    /*border: var(--border-style);*/
+    padding: 32px 0px;
 }
 
 #txtContent
