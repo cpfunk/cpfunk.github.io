@@ -152,7 +152,7 @@ tr:nth-child(even) {
     color: var(--text-color);
 }
 
-.socialLink:hover, .navLink:hover {
+.socialLink:hover, .navLink:hover, #title:hover {
     color: var(--link);
 }
 
