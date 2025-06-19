@@ -4,12 +4,11 @@
     --light-contrast-fill: white;
     --dark-contrast-fill: rgb(231, 231, 231);
     --text-color: black;
-    --edge-fill: var(--text-color);
     --highlight: blue;
     --heading-color: black;
     --link: var(--highlight);
     --link-visited: purple;
-    --border-style: 1px solid var(--edge-fill);
+    --border-style: 1px solid grey;
     --body-font-size: 18px;
 }
 
@@ -105,8 +104,7 @@ tr:nth-child(even) {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-top: var(--border-style);
-    border-bottom: var(--border-style);
+    align-items: center;
 }
 
 #content {
@@ -114,11 +112,10 @@ tr:nth-child(even) {
     flex-direction: column;
     align-content: center;
     width: 700px;
-    min-height: 500px;
-    max-height: fit-content;
+    height: fit-content;
     background-color: var(--box-fill);
-    margin: 16px 32px;
-    border: var(--border-style);
+    margin: 0px auto;
+    /*border: var(--border-style);*/
 }
 
 #txtContent
@@ -126,7 +123,7 @@ tr:nth-child(even) {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 16px 32px;
+  padding: 16px 0px;
 }
 
 #social {
@@ -137,15 +134,17 @@ tr:nth-child(even) {
 .navDiv {
     text-align: center;
     font-size: var(--body-font-size);
-    border: none;
-    background-color: transparent;
-    border-right: var(--border-style);
-    padding: 0px 16px;
-    margin: 16px 0px;
 }
 
-.navDiv:last-child {
-    border-right: none;
+.navLine {
+    height: fit-content;
+    width: 16px;
+    margin: 0px 8px;
+    border-bottom: var(--border-style);
+}
+
+.navLine:first-child, .navLine:last-child {
+    width: 50%;
 }
 
 .socialLink, .socialLink:visited, .navLink, .navLink:visited {
@@ -180,11 +179,22 @@ tr:nth-child(even) {
     background-color: transparent;
     border: none;
   }
+
+  #txtContent
+  {
+    padding: 16px 32px;
+  }
+
   
   .navDiv, #title{
       border: none;
       border-bottom: var(--border-style);
       margin-bottom: 0px;
-      padding-bottom: 16px;
-    }
+      padding: 16px 0px;
+      width: 100%;
+  }
+
+  .navDash, .navLine {
+    visibility: hidden;
+  }
 }
