@@ -96,7 +96,7 @@ tr:nth-child(even) {
     margin: 0px auto;
 }
 
-#navBar {
+nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -156,7 +156,7 @@ tr:nth-child(even) {
 }
 
 @media (max-width: 800px) {
-  #navBar {
+  nav {
     flex-direction: column;
     border: none;
     padding: 0px;
