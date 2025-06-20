@@ -43,6 +43,10 @@ a {
     font-size: var(--body-font-size);
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 a:visited {
     color: var(--link-visited);
 }
@@ -92,8 +96,7 @@ tr:nth-child(even) {
     font-weight: 900;
     text-align: center;
     width: fit-content;
-    padding: 16px 0px;
-    margin: 0px auto;
+    margin: 16px auto;
 }
 
 nav {
@@ -142,6 +145,14 @@ nav {
     width: 50%;
 }
 
+.navLine:first-child {
+    margin-left: 0px;
+}
+
+.navLine:last-child {
+    margin-right: 0px;
+}
+
 .socialLink, .socialLink:visited, .navLink, .navLink:visited, #title {
     text-decoration: none;
     color: var(--text-color);
@@ -149,10 +160,6 @@ nav {
 
 .socialLink:hover, .navLink:hover, #title:hover {
     color: var(--highlight);
-}
-
-.navLink:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 800px) {
@@ -180,6 +187,7 @@ nav {
   .navLink, #title{
       border: none;
       border-bottom: var(--line-style);
+      margin: 0px;
       padding: 16px 0px;
       width: 100%;
   }
