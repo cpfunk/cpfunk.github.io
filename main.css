@@ -1,0 +1,27 @@
+html, body {
+  font-family: "Alegreya", serif;
+  font-size: 18px; /* Sets the standard base size for the site */
+  background-color:antiquewhite;
+}
+
+nav {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration-line: underline;
+  font-weight: 600;
+  text-decoration-thickness: 2px; /* Adjust the thickness here */
+}
+
+a:link {
+    color: darkslateblue;
+}
+
+a:visited {
+    color: darkmagenta;
+}
