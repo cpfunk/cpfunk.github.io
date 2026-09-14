@@ -1,11 +1,22 @@
+:root {
+    --background-color: antiquewhite;
+    --forground-color: black;
+}
+
 html, body {
   font-family: "Alegreya", serif;
   font-size: 18px; /* Sets the standard base size for the site */
-  background-color:antiquewhite;
+  background-color: var(--background-color);
+}
+
+body {
+  margin: 8px;  
 }
 
 nav {
     font-family: "Montserrat", sans-serif;
+    border-bottom: 1px solid var(--forground-color);
+    padding-bottom: 8px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,7 +30,7 @@ a {
 }
 
 hr {
-    border-color: black;
+    border-color: var(--forground-color);
     border-style: solid;
 }
 
@@ -32,8 +43,13 @@ a:visited {
 }
 
 nav a, nav a:link, nav a:visited {
-    color: black;
-    text-decoration: underline;
-    font-weight: bolder;
-    text-decoration-thickness: 2px;
+    display: inline-block;
+    padding: 8px 8px;
+    color: var(--forground-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--forground-color);
+    color: var(--background-color);
 }
