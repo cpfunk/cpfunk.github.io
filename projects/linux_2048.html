@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>My First Project</title>
-        <base href="https://cpfunk.github.io/">
-        <!-- <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\"> -->
+        <title>Bringing 2048 to Linux with the ncurses Library</title>
+        <!-- <base href="https://cpfunk.github.io/"> -->
+        <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +11,44 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <p>
-            ← <a href="projects.html">Back to projects</a>
-        </p>
-        <h2>My First Project</h2>
-        <p style="max-width: 800px;">
-            This page is under construction...
-        </p>    
+        <div style="width: 800px;">
+            <p>
+                ← <a href="projects.html">Back to projects</a>
+            </p>
+            <h2>Bringing 2048 to Linux with the ncurses Library</h2>
+            <figure>
+                <img
+                    src="assets/2048_screenshot.png"
+                    alt="View of a silicon wafer with color gradients."
+                    width="500"
+                >
+                <figcaption><b>Figure 1:</b> 2048 for linux running in wsl.</figcaption>
+            </figure>
+            <h3>Project Overview</h3>
+            <p style="max-width: 800px;">
+                For my final project in EE285, I created a version of the hit web game 2048 by Gabriele Cirulli
+                for the Linux shell in C. For this project, I created the terminal user interface (TUI) using
+                the popular unix library ncurses.
+            </p>
+            <h3>My Role</h3>
+                I developed this project over Thanksgiving break in Fall 2024.
+            <h3>Skills or Knowledge Gained</h3>
+            <p>
+                This project served as my introduction to using the ncurses library in C. It also allowed me to practise
+                developing my code organization skills, and enabled me to practise many of the C coding concepts taught
+                in EE285; for example, this program features a lot of nested for loops since the game involves shifting
+                the numbers in the 2048 grid when an arrow key is pressed.
+                to the user is a 4x4 grid.
+            </p>
+            <h3>Rresources Used</h3>
+            <ul>
+                <li>
+                    In creating this project, I often used the <a href="https://2048game.com">origional version of the game</a> as a reference for how the game should behave.
+                </li>
+                <li>
+                    To find out how the ncurses library should be used, I frequently consulted <a href="https://linux.die.net/man/3/ncurses">linux.die.net</a> and <a href="https://invisible-island.net/ncurses/">invisible-island.net</a>.
+                </li>
+            </ul>
+        </div>
     </body>
 </html>
