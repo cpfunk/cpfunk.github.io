@@ -16,38 +16,99 @@
             <p>
                 ← <a href="projects.html">Back to projects</a>
             </p>
-            <h2>Bringing 2048 to Linux with the ncurses Library</h2>
+            <h2>Creating a Digital Optometrist Perimeter Control Circuit</h2>
             <figure>
                 <img
-                    src="assets/2048_screenshot.png"
+                    src="assets/perimeter_layout.png"
                     alt="View of a silicon wafer with color gradients."
-                    width="500"
+                    width="800"
                 >
-                <figcaption><b>Figure 1:</b> 2048 for linux running in wsl.</figcaption>
+                <figcaption><b>Figure 1:</b> Final Layout of perimeter block diagram.</figcaption>
             </figure>
             <h3>Project Overview</h3>
             <p style="max-width: 800px;">
-                For my final project in EE285, I created a version of the hit web game 2048 by Gabriele Cirulli
-                for the Linux shell in C. For this project, I created the terminal user interface (TUI) using
-                the popular unix library ncurses.
+                For this project, I was paired with another student from EE330 to create 
+                a digital perimeter controller using Verilog and Cadence Virtuoso.
+                The project requirements and the controller's behavior were defined in the final project document
+                as follows:
+                <br>
+                <hr>
+                <br>
+                <i>
+                This project will be to design a 64-pixel perimeter. The design is to be completed through post
+                layout simulation. At each pixel location, there will be an LED. The perimeter randomly and 
+                sequentially generates a light signal at each of the pixel locations. The time between generating 
+                the test signals should be between 7 sec and 20 sec and vary enough so the patient cannot 
+                predict when the next signal will be applied. The patient is asked to click on an SPST momentary 
+                switch every time a light is observed. A successful detection is to be recorded if the SPST is 
+                clicked within 5 seconds of applying the stimulus. At the conclusion of the test, the perimeter 
+                should have in memory the number of correct detections. Occasionally, a patient may click if 
+                there is no signal present, and this will be defined as a false click. The number of false clicks 
+                should also be recorded. After the test is over, the number of successful clicks and the number of 
+                false clicks should be displayed on a 4-digit 7-segment display. You may specify any 
+                commercial 4-digit 7-segment display. The technician conducting the test will have two switches 
+                to control the perimeter. One is a toggle switch which should be used as an input to determine 
+                whether the displayed output is the number of successful clicks or the number of false clicks. 
+                The other is an SPST push button switch that will start another test. This readout should remain 
+                active after the test is completed until another test is initiated.
+                <br>
+                <br>&emsp;— Final Projects Document EE330</i>
+                <hr>
+                In addition to the digital circuit, there were several smaller analog portions that were required to ensure
+                this circuit's functionality; for example, we created a 16 MHz ring oscillator and a Schmitt trigger to allow for more
+                straightforward debouncing of the push button's input signal.
             </p>
             <h3>My Role</h3>
-                I developed this project over Thanksgiving break in Fall 2024.
+                I wrote a large portion of the core functionality of this module, including the pseudo-random number generator,
+                the state machine, among others. I also created schematics, layouts, and testbenches for the various analog components like
+                the LED drive transistors, the 16 MHz ring oscillator, and the Schmitt trigger used for providing hysteresis
+                for the button input. When it came to creating the final layout, my partner and I were logged into the same machine,
+                so we worked on the layout in Cadence simultaneously.
             <h3>Skills or Knowledge Gained</h3>
             <p>
-                This project served as my introduction to using the ncurses library in C. It also allowed me to practise
-                developing my code organization skills, and enabled me to practise many of the C coding concepts taught
-                in EE285; for example, this program features a lot of nested for loops since the game involves shifting
-                the numbers in the 2048 grid when an arrow key is pressed.
-                to the user is a 4x4 grid.
-            </p>
-            <h3>Rresources Used</h3>
+            Throughout the course of this project, I was able to practise and learn several critical skills related to integrated IC design:
             <ul>
                 <li>
-                    In creating this project, I often used the <a href="https://2048game.com">origional version of the game</a> as a reference for how the game should behave.
+                    I learned how to synthasize and perform place and route digital circuits using Cadence Genus and Innovous.
                 </li>
                 <li>
-                    To find out how the ncurses library should be used, I frequently consulted <a href="https://linux.die.net/man/3/ncurses">linux.die.net</a> and <a href="https://invisible-island.net/ncurses/">invisible-island.net</a>.
+                    I learned how use Cadence Virtuoso to create integrated circuit layouts.
+                </li>
+                <li>
+                    I learned how to perform analog-mixed signal simulations using Cadence Spectre AMS Designer.
+                </li>
+                <li>
+                    I learned how to design a ring oscillator and a schmitt trigger.
+                </li>
+            </ul>
+            </p>
+            <h3>Rresources Used</h3>
+            In writing the Verilog code for this module, the following resources were used:
+            <ul>
+                <li>
+                    AI was not used to generate substantial portions of the Verilog code; however, AI was used in the code review
+                    and debugging phase to identify potentially problematic areas in the Verilog code and ensure the Verilog's synthesizability.
+                    In addition, Claude Code was also used to create the double-dabble BCD decoder.
+                    ChatGPT was also used to create testbenches for the Double Dabble BCD decoder and the seven-segment decoder, since these modules'
+                    operations are based on very common structures.
+                </li>
+                <li>
+                    "Double Dabble." Wikipedia, Wikimedia Foundation, <a href="https://en.wikipedia.org/wiki/Double_dabble">https://en.wikipedia.org/wiki/Double_dabble</a>.
+                </li>
+            </ul>
+            To create some of the analog components in this design, such as the Schmitt trigger and the 16 MHz ring oscillator, the following resources were consulted:
+            <ul>
+                <li>
+                    Woods, D. L., Wyma, J. M., Yund, E. W., Herron, T. J., & Reed, B. (2015). Factors influencing the latency of simple reaction time. Frontiers in Human Neuroscience, 9, 131. <a href="https://doi.org/10.3389/fnhum.2015.00131">https://doi.org/10.3389/fnhum.2015.00131</a>. 
+                </li>
+                <li>
+                    Filanovsky, I. M., and H. Bakes. “CMOS Schmitt Trigger Design.” IEEE Transactions on Circuits and Systems I: Fundamental Theory and Applications, vol. 41, no. 1, Jan. 1994, pp. 46-49. Massachusetts Institute of Technology, <a href="https://web.mit.edu/magic/Public/papers/00260219.pdf">https://web.mit.edu/magic/Public/papers/00260219.pdf</a>.
+                </li>
+                <li>
+                    Texas Instruments. Debounce a Switch. Oct. 2020, Texas Instruments, <a href="https://www.ti.com/lit/ab/scea094/scea094.pdf">https://www.ti.com/lit/ab/scea094/scea094.pdf</a>.
+                </li>
+                <li>
+                    Geiger, Randall. EE 3300 Lecture 44 (Fall 2025). Department of Electrical and Computer Engineering, Iowa State University, <a href="https://class.ece.iastate.edu/ee330/lectures/EE%203300%20Lect%2044%20Fall%202025.pdf">https://class.ece.iastate.edu/ee330/lectures/EE%203300%20Lect%2044%20Fall%202025.pdf</a>.
                 </li>
             </ul>
         </div>
