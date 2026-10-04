@@ -60,3 +60,17 @@ nav a:hover {
 li {
   margin-top: 12px;
 }
+
+figure {
+    width: fit-content;
+}
+
+figure img, figure video {
+    border: solid black 2pt;
+}
+
+figure figcaption {
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}

@@ -1,22 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Navigation and object detection with iRobot Create® 2</title>
-        <base href="https://cpfunk.github.io/">
-        <!-- <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
+
+<head>
+    <title>Navigation and object detection with iRobot Create® 2</title>
+    <base href="https://cpfunk.github.io/">
+    <!-- <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div style="width: 800px;">
         <p>
             ← <a href="projects.html">Back to projects</a>
         </p>
-        <h2>My First Project</h2>
+        <h2>Bringing 2048 to Linux with the ncurses Library</h2>
+        <figure>
+            <img src="assets/iRobotCreate.png" alt="View of a silicon wafer with color gradients." width="500">
+            <figcaption><i><b>Figure 1:</b> The CPRE288 iRobot Create 2 platform and the cylinders used as environmental
+                    hazards.</i></figcaption>
+        </figure>
+        <h3>Project Overview</h3>
         <p style="max-width: 800px;">
-            This page is under construction...
-        </p>    
-    </body>
+            For the final project in CPRE288 (Embedded Systems), I wrote the embedded software in C that allowed the
+            Texas Instruments
+            ARM-based Tiva microcontroller to interface with the various peripherals included on the iRobot Create
+            2-based platform used throughout
+            the CPRE288 lab. The Goal of this project was to provide the means with which this robot could be steered
+            through an obstacle course from
+            a remote location.
+            <br>
+            When Complete, my robot was able to perform object detection using the infrared and ultrasonic sensors
+            attached to a PWM-controlled
+            servo motor. Remote navigation was also added using the SPI-connected WIFI board and the iRobot Create 2's
+            UART-based interface.
+            This WIFI interface was also used to transmit object detection data and other information to a GUI I created
+            in MATLAB.
+            <br>
+            A demonstration showing how the robot was controlled using the MATLAB-based GUI is shown in the brief video
+            below.
+        </p>
+        <figure>
+            <video src="assets/iRobot_gui.mp4" type="video/mp4" width="1000" controls="true"
+                alt="Video demonstration of the GUI's object detection and navigation controls and visuals."></video>
+            <figcaption><i><b>Figure 2:</b> Demonstration of the GUI's object detection and navigation controls and
+                    visuals.</i></figcaption>
+        </figure>
+        <p>
+            From the video in Figure 2, it may be observed how the GUI provided the controls and visual feedback
+            necessary for piloting the iRobot Create 2
+            from a remote location. The plot on the right side of the GUI is used to show the robot's current position
+            from a bird's-eye view, the path which it has traveled (the blue line),
+            and the obstacles it has detected in its path (the red dots). The GUI also features visual indicators in the
+            lower left-hand side to show whether the robot's
+            bumper has run up against an obstacle, encountered the field's boundary, or detected a cliff. For simpler
+            navigation, the user is able to click on a point in the field to
+            set the direction and distance the robot should travel.
+        </p>
+        <h3>My Role</h3>
+        I wrote and tested the C code used to read and interface with the various peripherals connected to the Tiva
+        microcontroller's I/O.
+        I was responsible for creating the object detection and navigation code as well as the majority of the
+        MATLAB-based GUI's frontend and backend
+        including the battery level indicator, and the plot for the sensor data (shown on the left of the video in
+        Figure 2) and the bird's-eye view representation of the navigation field.
+
+        <h3>Skills or Knowledge Gained</h3>
+        <p>
+            This project allowed me to learn how to configure the peripherals on an ARM-based microcontroller such as
+            UART, SPI, PWM, and interrupts.
+            In the process of configuring these devices, I learned how to correctly interpret the technical
+            documentation for the microcontroller and the connected peripheral devices.
+            <br>
+            Through this project, I also learned how to programmatically create GUIs in MATLAB.
+        </p>
+        <h3>Resources Used</h3>
+        <ul>
+            <li>
+                The main resource that was used as a reference when writing code that interfaces with various
+                peripherals on the iRobot
+                was the <a href="https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf">Tiva TM4C123GH6PM Microcontroller's
+                    datasheet</a>.
+            </li>
+            <li>
+                When connecting the microcontroller to the iRobot Create 2 over UART, I often referenced the iRobot
+                Create 2's Open Interface Specification.
+                The documentation for other peripherals was also referenced, for example, the technical documentation
+                for the robot's IR sensor, the ultrasonic sensor,
+                and the servo was referenced when interfacing the microcontroller with these devices.
+            </li>
+            <li>
+                I extensively referenced the documentation on various GUI-related functions on <a
+                    href="https://www.mathworks.com/help/?s_tid=mlh_sn_help">MATLAB's Help Center</a> website.
+            </li>
+        </ul>
+    </div>
+</body>
+
 </html>

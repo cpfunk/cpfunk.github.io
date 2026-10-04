@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My First Project</title>
-        <base href="https://cpfunk.github.io/">
-        <!-- <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
+
+<head>
+    <title>Creating a RISC-V Microprocessor for Micro Quadcopter Applications</title>
+    <base href="https://cpfunk.github.io/">
+    <!-- <base href="C:\Users\Chris\Desktop\github\cpfunk.github.io\cpfunk.github.io\"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div style="width: 800px;">
         <p>
             ← <a href="projects.html">Back to projects</a>
         </p>
-        <h2>My First Project</h2>
+        <h2>Creating a RISC-V Microprocessor for Micro Quadcopter Applications</h2>
+        <figure>
+            <img src="assets/sd_2027.png" alt="." width="500">
+            <figcaption><i><b>Figure 1:</b> Block diagram of microprocessor microquadcopter.</i></figcaption>
+        </figure>
+        <h3>Project Overview</h3>
         <p style="max-width: 800px;">
-            This page is under construction...
-        </p>    
-    </body>
+            For my senior design project, a team of other EE and CprE seniors and I are creating a microcontroller (MCU)
+            that features interfaces and features
+            targeting high-performance micro quadcopter applications like the Crazyflie 2.1.
+            <br>
+            <br>
+            The MCU we are creating features support for protocols such as
+            SPI, I2C, UART. It also features PWM support for controlling the quadcopter's motors, PID acceleration for
+            controlling the PWM outputs, and a
+            Trigonometric Unit (TMU). This TMU enables the efficient processing of positional data from the Inertial
+            Measurement Unit (IMU).
+            We plan to have this microcontroller fabricated in the spring using the Sky130 open-source process.
+        </p>
+        <h3>My Role</h3>
+        My role in this project involves designing and testing various pieces of hardware on this microcontroller, such
+        as the
+        I2C interface and the UART protocol support. I am also the team's documentation lead, so I am responsible for
+        creating
+        and maintaining this project's documentation.
+        <h3>Skills or Knowledge Gained</h3>
+        <p>
+            Through this project, I am learning how to perform randomized unit testing using SystemVerilog. I am also
+            learning the process of
+            verifying a digital chip such that we can be confident in the functionality once it is fabricated. This
+            verification process involves
+            both simulating the design on an FPGA and running gate-level simulations on the synthesized design.
+        </p>
+        <h3>Resources Used</h3>
+        <ul>
+            <li>
+                In creating this project, our team used ChipFoundry's CLI to synthesize the Verilog HDL, run
+                simulations, and perform place and route.
+            </li>
+            <li>
+                We also referenced <a href="https://ieeexplore.ieee.org/document/5222693">"The CORDIC Trigonometric
+                    Computing Technique"</a> by Jack E. Volder when designing our CORDIC-based TMU.
+            </li>
+            <li>
+                When designing the I2C interface, we used the <a
+                    href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">"I2C-Bus Specification and User
+                    Manual"</a> by NXP Semiconductors as a reference.
+            </li>
+            <li>
+                When designing the SPI interface, we referenced <a
+                    href="https://www.mouser.com/pdfdocs/tn15_spi_interface_specification.PDF">"SPI Interface
+                    Specification"</a> by VTI Technologies.
+            </li>
+            <li>
+                When designing the UART interface, we referred to <a
+                    href="https://www.analog.com/media/en/analog-dialogue/volume-54/number-4/uart-a-hardware-communication-protocol.pdf">"UART:
+                    A Hardware Communication Protocol Understanding Universal Asynchronous Receiver/Transmitter"</a>
+                by Peňa and Legaspi, published in <i>AnalogDialogue</i>.
+            </li>
+        </ul>
+    </div>
+</body>
+
 </html>
