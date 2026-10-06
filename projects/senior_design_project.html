@@ -39,21 +39,23 @@
             We plan to have this microcontroller fabricated in the spring using the Sky130 open-source process.
         </p>
         <h3>My Role</h3>
-        My role in this project involves designing and testing various pieces of hardware on this microcontroller, such
-        as the
-        I2C interface and the UART protocol support. I am also the team's documentation lead, so I am responsible for
-        creating
-        and maintaining this project's documentation.
+        My role in this project involves designing and testing various pieces of hardware on the microcontroller, such
+        as the I2C interface. I am also the team's documentation lead, so I am responsible for
+        creating and maintaining this project's documentation.
         <h3>Skills or Knowledge Gained</h3>
         <p>
             Through this project, I am learning how to perform randomized unit testing using SystemVerilog. I am also
-            learning the process of
-            verifying a digital chip such that we can be confident in the functionality once it is fabricated. This
-            verification process involves
-            both simulating the design on an FPGA and running gate-level simulations on the synthesized design.
+            learning the process of verifying a digital chip such that we can be confident that it will work once it is fabricated.
+            This verification process involves running both gate-level and FPGA simulations.
         </p>
         <h3>Resources Used</h3>
         <ul>
+            <li>
+                All of the members on the team have experiencing designing a RISC-V processor, however,
+                to speed up development time and enable a more focused approach to engineering and creating
+                the core features that set this microcontroller apart, we chose to use a pre-tested open-source
+                32-bit RISC-V processor IP.
+            </li>
             <li>
                 In creating this project, our team used ChipFoundry's CLI to synthesize the Verilog HDL, run
                 simulations, and perform place and route.
