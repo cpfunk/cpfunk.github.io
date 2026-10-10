@@ -1,8 +1,8 @@
 :root {
-    --background-color: white;
-    --forground-color: black;
-    --link-color: #0b7cd8;
-    --link-visited-color: #003783;
+    --background-color: black;
+    --forground-color: white;
+    --link-color: #1793f9;
+    --link-visited-color: #c4e4ff;
 }
 
 html, body {
@@ -17,13 +17,13 @@ body {
 }
 
 nav {
-    font-family: "Montserrat", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
     border-bottom: 1px solid var(--forground-color);
     padding-bottom: 8px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 a {
@@ -61,11 +61,16 @@ li {
   margin-top: 12px;
 }
 
+img {
+    border-radius: 10px;
+}
+
 figure {
     width: fit-content;
 }
 
 figure img, figure video {
+    border-radius: 0px;
     border: solid black 2pt;
 }
 
