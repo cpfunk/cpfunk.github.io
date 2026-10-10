@@ -2,14 +2,13 @@
     --background-color: black;
     --forground-color: white;
     --link-color: #1793f9;
-    --link-visited-color: #c4e4ff;
+    --link-visited-color: #c017f9;
 }
 
 html, body {
-  font-family: "Alegreya", serif;
-  font-size: 18px; /* Sets the standard base size for the site */
+  font-family: "IBM Plex Mono", monospace;
   background-color: var(--background-color);
-  color: var(--forground-color);
+  color: var(--forground-color);    
 }
 
 body {
