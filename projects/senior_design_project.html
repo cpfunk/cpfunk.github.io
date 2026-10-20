@@ -36,15 +36,28 @@
             Measurement Unit (IMU).
             We plan to have this microcontroller fabricated in the spring using the Sky130 open-source process.
         </p>
+        <h3>Big Picture Contribution</h3>
+        <p>
+            Due to the small size of the circuit boards on microquadcopter drones, and because of the need to minimize power consumption,
+            these microquadcopter drones feature only one microcontroller for both reading in sensor data from the inertial measurement unit, controlling all four rotors,
+            and recieving and responding to remote control signals from the bluetooth chip. Since the microcontroller's main thread is occupied with processing these inputs,
+            this leaves little overhead for running other processes that a user may want to perform with the drone, like video processing. Our microcontroller design
+            aims to unburden the microquadcopter's main thread by implementing a microcontroller architecture that features parameter, integral, derivative (PID) acceleration.
+            This will allow the PID control of pulse width modulated (PWM) outputs (which are used to control the motors) to occur separately from the microcontroller's main thread,
+            and will enable a the quadcopter to process other tasks with its main thread without a second microcontroller, and with little impact to the drone's power consumption.
+        </p>
         <h3>My Role</h3>
-        My role in this project involves designing and testing various pieces of hardware on the microcontroller, such
-        as the I2C interface. I am also the team's documentation lead, so I am responsible for
+        My role in this project involves selecting SPI and I2C cores and creating a wishbone to TL-UL that will enable these cores to interface with
+        the other on-chip devices connected to the wishbone bus. I am also involved in testing various pieces of hardware on the microcontroller, like 
+        the I2C interface and the SPI interface. I am also the team's documentation lead, so I am responsible for
         creating and maintaining this project's documentation.
         <h3>Skills or Knowledge Gained</h3>
         <p>
             Through this project, I am learning how to perform randomized unit testing using SystemVerilog. I am also
             learning the process of verifying a digital chip such that we can be confident that it will work once it is fabricated.
-            This verification process involves running both gate-level and FPGA simulations.
+            This verification process involves running both gate-level and FPGA simulations. Since I am responsible for implementing modules
+            that communicate via the I2C, SPI, wishbone, and TL-UL protocols, I have been able to learn about how these various communication protocols
+             operate.
         </p>
         <h3>Resources Used</h3>
         <ul>
@@ -63,9 +76,7 @@
                     Computing Technique"</a> by Jack E. Volder when designing our CORDIC-based TMU.
             </li>
             <li>
-                When designing the I2C interface, we used the <a
-                    href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">"I2C-Bus Specification and User
-                    Manual"</a> by NXP Semiconductors as a reference.
+                When selecting a I2C controller
             </li>
             <li>
                 When designing the SPI interface, we referenced <a
