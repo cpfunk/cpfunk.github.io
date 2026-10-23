@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <div style="width: 800px;">
+    <div style="max-width: 800px;">
         <p>
             ← <a href="projects.html">Back to projects</a>
         </p>
         <h2>Creating a RISC-V Microprocessor for Micro Quadcopter Applications</h2>
         <figure>
-            <img src="assets/sd_2027.png" alt="." width="500">
+            <img src="assets/sd_2027.png" alt="." max-width="500">
             <figcaption><i><b>Figure 1:</b> Block diagram of microprocessor microquadcopter.</i></figcaption>
         </figure>
         <h3>Project Overview</h3>
@@ -65,7 +65,7 @@
                 All of the members on the team have experiencing designing a RISC-V processor, however,
                 to speed up development time and enable a more focused approach to engineering and creating
                 the core features that set this microcontroller apart, we chose to use a pre-tested open-source
-                32-bit RISC-V processor IP.
+                32-bit RISC-V processor IP. For this project, we chose to use a VexRISC 32-bit RISC-V processor IP.
             </li>
             <li>
                 In creating this project, our team used ChipFoundry's CLI to synthesize the Verilog HDL, run
@@ -73,21 +73,31 @@
             </li>
             <li>
                 We also referenced <a href="https://ieeexplore.ieee.org/document/5222693">"The CORDIC Trigonometric
-                    Computing Technique"</a> by Jack E. Volder when designing our CORDIC-based TMU.
+                Computing Technique"</a> by Jack E. Volder when designing our CORDIC-based TMU.
             </li>
             <li>
-                When selecting a I2C controller
+                In selecting the IP cores for the I2C and SPI interface modules, we referenced the technical documentation for
+                the Bosch BMI088 IMU since this is the IC that would require I2C and SPI interface module in our target application.
             </li>
             <li>
                 When designing the SPI interface, we referenced <a
-                    href="https://www.mouser.com/pdfdocs/tn15_spi_interface_specification.PDF">"SPI Interface
-                    Specification"</a> by VTI Technologies.
+                href="https://www.mouser.com/pdfdocs/tn15_spi_interface_specification.PDF">"SPI Interface
+                Specification"</a> by VTI Technologies.
             </li>
             <li>
                 When designing the UART interface, we referred to <a
                     href="https://www.analog.com/media/en/analog-dialogue/volume-54/number-4/uart-a-hardware-communication-protocol.pdf">"UART:
                     A Hardware Communication Protocol Understanding Universal Asynchronous Receiver/Transmitter"</a>
                 by Peňa and Legaspi, published in <i>AnalogDialogue</i>.
+            </li>
+        </ul>
+        <h3>Supporting Documents</h3>
+        <ul>
+            <li>
+                <a href="Duwester #3.pptx.pdf">Senior design meeting #3 presentation</a>
+            </li>
+            <li>
+                <a href="EE491 Weekly Report 5-1-1.pdf">Weekly report #5</a>
             </li>
         </ul>
     </div>
