@@ -9,7 +9,7 @@ html, body {
   font-family: "DM Sans", sans-serif;
   background-color: var(--background-color);
   color: var(--forground-color);
-  width=100%;
+  width: 100%;
 }
 
 body {
@@ -72,5 +72,5 @@ figure img, figure video {
 figure figcaption {
     font-style: italic;
     text-align: center;
-    width=100%;
+    width: 100%;
 }
